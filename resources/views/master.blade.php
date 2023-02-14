@@ -53,7 +53,7 @@
 	.cart-list-divider{
 		border-bottom: 1px solid #cccc;
 		margin-bottom: 20 px;
-		padding-bottom: 20 px;
+		padding-bottom: 20 px; 
 	}
 </style>
 </html>
