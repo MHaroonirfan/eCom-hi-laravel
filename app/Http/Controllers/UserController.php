@@ -18,4 +18,32 @@ class UserController extends Controller
     			return redirect('/');
     		}
     }
+
+
+    function register(Request $req){
+
+
+        $user = new User;
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->password = Hash::make($req->name);
+        $user->save();
+        return redirect('/login');
+
+
+        
+        // $user = User::where(['email'=>$req->email])->first();
+        //     if(!$user || !Hash::check($req->password, $user->password))
+        //     {
+        //         return "User or password is incorrect";
+        //     }else{
+        //         $req->session()->put('user', $user);
+        //         return redirect('/');
+        //     }
+    }
+
+
+
+
+
 }
